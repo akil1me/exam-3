@@ -15,6 +15,8 @@ let moreChekProduct = ["Achchiq", "Sosiskali", "Parmezan"];
 
 let resultArray = [];
 let resultArray2 = [];
+console.log(resultArray);
+console.log(resultArray2);
 
 for (let option = 0; option < selectArr.length; option++) {
   let selectOpt = document.createElement("option");
@@ -69,7 +71,7 @@ for (let check = 0; check < topCheckPizza.length; check++) {
 
     } else {
       resultTopList.removeChild(resultItem);
-      resultArray.splice(1, topCheckPizzacheck.length);
+      resultArray.splice(0, topCheckPizza[check].length);
     }
   })
 }
@@ -96,7 +98,7 @@ for (let checkMore = 0; checkMore < moreChekProduct.length; checkMore++) {
 
     } else {
       resultMoreList.removeChild(resultItem2)
-      resultArray2.splice(1, moreChekProduct[checkMore]);
+      resultArray2.splice(0, moreChekProduct[checkMore].length);
     }
   })
 }
