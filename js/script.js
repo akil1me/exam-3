@@ -1,23 +1,28 @@
+// Select and Input contents
 let elSelect = document.querySelector(".form__select");
 let elInputRadioContent = document.querySelector(".form__input-radio-content");
 let elInputChekContentLonger = document.querySelector(".form__input-chek-content");
 let elInputChekContentMore = document.querySelector(".form__input-chek-more");
 
+// Result contents(span, ul)
 let resultBread = document.querySelector(".pizza__bread-span");
 let resultLong = document.querySelector(".pizza__long-span");
 let resultTopList = document.querySelector(".pizza__top-list");
 let resultMoreList = document.querySelector(".pizza-more-list");
 
+// Arrays of contents
 let selectArr = ["Yupqa", "Urtancha", "Qalin"];
 let radioArr = [25, 30, 35];
 let topCheckPizza = ["Pomidor", "Kurka go`shti", "Zaytun", "Tuzlangan bodring", "Qo`ziqorin", "Qazi"];
 let moreChekProduct = ["Achchiq", "Sosiskali", "Parmezan"];
 
+// Empty arrays and them consols
 let resultArray = [];
 let resultArray2 = [];
 console.log(resultArray);
 console.log(resultArray2);
 
+// 1 for select
 for (let option = 0; option < selectArr.length; option++) {
   let selectOpt = document.createElement("option");
   selectOpt.value = selectArr[option];
@@ -29,6 +34,7 @@ for (let option = 0; option < selectArr.length; option++) {
   })
 }
 
+// 2 for Input radio
 for (let radio = 0; radio < radioArr.length; radio++) {
   let inputRadio = document.createElement("input");
   inputRadio.setAttribute("type", "radio");
@@ -47,6 +53,7 @@ for (let radio = 0; radio < radioArr.length; radio++) {
   })
 }
 
+// 3 for Input checkbox on top
 for (let check = 0; check < topCheckPizza.length; check++) {
   let inputCheck = document.createElement("input");
   inputCheck.setAttribute("type", "checkbox");
@@ -76,6 +83,7 @@ for (let check = 0; check < topCheckPizza.length; check++) {
   })
 }
 
+// 4 for Input checkbox on additionally
 for (let checkMore = 0; checkMore < moreChekProduct.length; checkMore++) {
   let inputCheckMore = document.createElement("input");
   inputCheckMore.setAttribute("type", "checkbox");
