@@ -6,36 +6,10 @@ body {
 }
 
 .pizza__top-list {
-  height: 100px;
-  overflow-y: scroll;
-}
-
-.pizza__top-list::-webkit-scrollbar {
-  width: 5px;
-}
-
-.pizza__top-list::-webkit-scrollbar-track {
-  background: #888;
-}
-
-.pizza__top-list::-webkit-scrollbar-thumb {
-  background: #f1f1f1;
+  height: 150px;
 }
 
 
 .pizza-more-list {
-  height: 40px;
-  overflow-y: scroll;
-}
-
-.pizza-more-list::-webkit-scrollbar {
-  width: 5px;
-}
-
-.pizza-more-list::-webkit-scrollbar-track {
-  background: #888;
-}
-
-.pizza-more-list::-webkit-scrollbar-thumb {
-  background: #f1f1f1;
+  height: 80px;
 }
