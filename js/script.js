@@ -16,11 +16,9 @@ let radioArr = [25, 30, 35];
 let topCheckPizza = ["Pomidor", "Kurka go`shti", "Zaytun", "Tuzlangan bodring", "Qo`ziqorin", "Qazi"];
 let moreChekProduct = ["Achchiq", "Sosiskali", "Parmezan"];
 
-// Empty arrays and them consols
+// Empty arrays result
 let resultArray = [];
 let resultArray2 = [];
-console.log(resultArray);
-console.log(resultArray2);
 
 // 1 for select
 for (let option = 0; option < selectArr.length; option++) {
@@ -69,17 +67,19 @@ for (let check = 0; check < topCheckPizza.length; check++) {
 
   let resultItem = document.createElement("li");
 
-  inputCheck.addEventListener("click", function () {
-
+  inputCheck.addEventListener("change", function () {
+    let topCheckPizzaIndex = resultArray.indexOf(this.value)
     if (inputCheck.checked) {
       resultArray.push(topCheckPizza[check]);
       resultTopList.appendChild(resultItem);
       resultItem.textContent = topCheckPizza[check];
 
-    } else {
+    } else if (!inputCheck.checked && resultArray.includes(this.value)) {
+      resultArray.splice(topCheckPizzaIndex, 1);
       resultTopList.removeChild(resultItem);
-      resultArray.splice(0, topCheckPizza[check].length);
     }
+    console.log(resultArray);
+
   })
 }
 
@@ -98,15 +98,18 @@ for (let checkMore = 0; checkMore < moreChekProduct.length; checkMore++) {
   elInputChekContentMore.appendChild(labelCheckMore);
 
   let resultItem2 = document.createElement("li");
-  inputCheckMore.addEventListener("click", function () {
+  inputCheckMore.addEventListener("change", function () {
+    let moreChekProductIndex = resultArray2.indexOf(this.value)
+
     if (inputCheckMore.checked) {
       resultArray2.push(moreChekProduct[checkMore]);
       resultMoreList.appendChild(resultItem2);
       resultItem2.textContent = moreChekProduct[checkMore];
 
-    } else {
-      resultMoreList.removeChild(resultItem2)
-      resultArray2.splice(0, moreChekProduct[checkMore].length);
+    } else if (!inputCheckMore.checked && resultArray2.includes(this.value)) {
+      resultArray2.splice(moreChekProductIndex, 1);
+      resultMoreList.removeChild(resultItem2);
     }
+    console.log(resultArray2);
   })
 }
